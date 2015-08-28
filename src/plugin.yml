@@ -1,0 +1,38 @@
+name: ChatRooms
+main: me.chiller.chatrooms.ChatRooms
+version: 1.4
+commands:
+    chatrooms:
+        description: Command for ChatRooms
+        usage: /chatrooms <command> [params]
+    cr:
+        description: Short command for ChatRooms
+        usage: /cr <command> [params]
+permissions:
+    chatrooms.*:
+        description: Gives access to all Chat Room commands and abilities
+        children:
+            chatrooms.create: true
+            chatrooms.remove: true
+            chatrooms.reload: true
+            chatrooms.list: true
+            chatrooms.help: true
+            chatrooms.nojoin: false
+    chatrooms.create:
+        description: Gives access to create Chat Rooms
+        default: op
+    chatrooms.remove:
+        description: Gives access to remove Chat Rooms
+        default: op
+    chatrooms.reload:
+        description: Gives access to reload Chat Rooms
+        default: op
+    chatrooms.list:
+        description: Gives access to list Chat Rooms
+        default: true
+    chatrooms.help:
+        description: Gives access to get help for Chat Rooms
+        default: true
+    chatrooms.nojoin:
+        description: Denies access to join a Chat Room
+        default: false
